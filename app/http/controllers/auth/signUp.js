@@ -20,7 +20,7 @@ const validate = async (params) => {
 const signUp = async (req, res) => {
   const {
     email, password, confirmPassword, fullName,
-  } = req.body.user;
+  } = req.body;
   await validate({
     email, password, confirmPassword, fullName,
   });

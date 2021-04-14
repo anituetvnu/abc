@@ -16,7 +16,7 @@ const validate = async (params) => {
 };
 
 const signIn = async (req, res) => {
-  const { email, password } = req.body.user;
+  const { email, password } = req.body;
   await validate({ email, password });
   const token = await authServices.signIn({ email, password });
   res.status(200).send(token);
